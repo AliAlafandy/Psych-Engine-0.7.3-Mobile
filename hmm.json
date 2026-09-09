@@ -79,8 +79,10 @@
     },
     {
       "name": "hxdiscord_rpc",
-      "type": "haxelib",
-      "version": "1.1.1"
+      "type": "git",
+      "dir": null,
+      "ref": "master",
+      "url": "git@github.com:FunkinPortingMobile/hxdiscord_rpc-android-support"
     },
     {
       "name": "flxanimate",

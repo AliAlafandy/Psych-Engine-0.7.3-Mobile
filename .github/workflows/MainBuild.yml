@@ -18,6 +18,9 @@ jobs:
         uses: krdlab/setup-haxe@v2.1.0
         with:
           haxe-version: ${{ env.HAXE_VER }}
+          
+      - name: Authenticate Git for Private Repositories
+        run: git config --global url."https://${{ secrets.ORG_PAT_TOKEN }}@github.com/".insteadOf "git@github.com:"   
 
       - name: Install Libraries
         run: |
