@@ -135,6 +135,7 @@
 	
 		<android extension="mobile.backend.java.FileUtils" />
 	
+	    <android target-sdk-version="34" minimum-sdk-version="24" />
 		<certificate path="key.keystore" password="psychport" alias="psychport" alias-password="psychport" />
     </section>
     
