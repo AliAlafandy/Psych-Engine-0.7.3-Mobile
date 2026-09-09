@@ -138,6 +138,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libvlc-dev libvlccore-dev libasound2-dev libx11-dev libxext-dev libxi-dev libxrandr-dev libxinerama-dev
 
+      - name: Authenticate Git for Private Repositories
+        run: git config --global url."https://${{ secrets.ORG_PAT_TOKEN }}@github.com/".insteadOf "git@github.com:"   
+        
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
@@ -166,7 +169,9 @@ jobs:
         uses: krdlab/setup-haxe@v2.1.0
         with:
           haxe-version: ${{ env.HAXE_VER }}
-
+      - name: Authenticate Git for Private Repositories
+        run: git config --global url."https://${{ secrets.ORG_PAT_TOKEN }}@github.com/".insteadOf "git@github.com:"   
+        
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
