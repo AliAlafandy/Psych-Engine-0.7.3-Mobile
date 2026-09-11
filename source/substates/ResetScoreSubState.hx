@@ -69,6 +69,12 @@ class ResetScoreSubState extends MusicBeatSubstate
 		noText.screenCenter(X);
 		noText.x += 200;
 		add(noText);
+
+		#if mobile
+		addVirtualPad('LEFT_RIGHT', 'A_B');
+		addVirtualPadCamera();
+		#end
+			
 		updateOptions();
 	}
 
